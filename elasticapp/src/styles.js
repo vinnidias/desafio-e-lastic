@@ -14,8 +14,21 @@ const styles = {
     },
 
     infoContainer:{
-
+       flexDirection: 'row',
+       borderBottomWidth: 1, 
+       borderColor: 'grey',
+       paddingTop: 10,
+       marginHorizontal: 10,
+       justifyContent: 'space-between'
     },
+
+
+    infoCardContainer: {
+        height: 100,
+        width: 90,
+        alignItems: 'center',     
+    },
+
     exerciseContainer: {
 
     },

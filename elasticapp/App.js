@@ -6,24 +6,46 @@ import {
   Image
 } from 'react-native';
 import styles from './src/styles'
+import InfoCard from './src/components/InfoCard'
 
 
 
-const App = ()=> {
-  return(
+const App = () => {
+  return (
     <View style={styles.mainContainer}>
-      
+
       <View style={styles.headerContainer}>
-        <Image 
-          source={require('./src/images/logo-color-small.png')}  
+        <Image
+          source={require('./src/images/logo-color-small.png')}
           style={styles.image}
         />
       </View>
 
       <View style={styles.infoContainer}>
-        <Text>
-          infos
-        </Text>
+        <InfoCard
+          icon={'🚩'}
+          description={'SERIES'}
+          numbers={'0/1'}
+        />
+
+        <InfoCard
+          icon={'🔄'}
+          description={'REPETIÇÕES'}
+          numbers={'0/1'}
+        />
+
+        <InfoCard
+          icon={'🚩'}
+          description={'PESO'}
+          numbers={'0/1'}
+        />
+
+        <InfoCard
+          icon={'🚩'}
+          description={'MÁXIMO'}
+          numbers={'0/1'}
+        />
+
       </View>
 
       <View style={styles.exerciseContainer}>
