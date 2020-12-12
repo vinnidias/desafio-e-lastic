@@ -49,9 +49,7 @@ const App = () => {
       </View>
 
       <View style={styles.exerciseContainer}>
-        <Text>
-          Exercícios
-        </Text>
+        
       </View>
 
     </View>

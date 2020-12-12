@@ -36,7 +36,9 @@ const styles = {
         fontWeight: 'bold'
     },
     exerciseContainer: {
-
+        borderTopWidth: 1,
+        borderColor: 'grey',
+        margin: 20
     },
     
 }
