@@ -9,13 +9,13 @@ const InfoCard = ({ icon, description, numbers }) => {
     return (
 
         <View style={styles.infoCardContainer}>
-            <Text>
+            <Text style={styles.infoIcon}>
                 {icon}
             </Text>
-            <Text>
+            <Text style={styles.infoText}>
                 {description}
             </Text>
-            <Text>
+            <Text style={styles.infoText}>
                 {numbers}
             </Text>
         </View>

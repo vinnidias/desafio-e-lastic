@@ -26,6 +26,15 @@ const styles = {
         alignItems: 'center',     
     },
 
+    infoIcon:{
+        margin: 10, 
+        fontSize: 20, 
+    },
+    infoText:{
+        marginVertical: 5,
+        color: 'grey',
+        fontWeight: 'bold'
+    },
     exerciseContainer: {
 
     },
