@@ -35,15 +35,15 @@ const App = () => {
         />
 
         <InfoCard
-          icon={'🚩'}
+          icon={'⚖️'}
           description={'PESO'}
-          numbers={'0/1'}
+          numbers={'0.00 kg'}
         />
 
         <InfoCard
-          icon={'🚩'}
+          icon={'💪🏽'}
           description={'MÁXIMO'}
-          numbers={'0/1'}
+          numbers={'0.00 kg'}
         />
 
       </View>

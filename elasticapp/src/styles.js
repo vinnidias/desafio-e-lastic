@@ -15,10 +15,7 @@ const styles = {
 
     infoContainer:{
        flexDirection: 'row',
-       borderBottomWidth: 1, 
-       borderColor: 'grey',
-       paddingTop: 10,
-       marginHorizontal: 10,
+       paddingTop: 30,
        justifyContent: 'space-between'
     },
 
