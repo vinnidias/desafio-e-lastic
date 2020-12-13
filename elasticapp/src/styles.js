@@ -64,12 +64,19 @@ const styles = {
         borderRadius: 40,
         height: 40,
         width: 300,
-        alignSelf: 'center'
+        alignSelf: 'center',
+        justifyContent: 'space-between',
+        flexDirection: 'row'
     },
     exerciseText: {
         alignSelf: 'center',
         color: 'grey',
         fontWeight: 'bold'
+    },
+    exerciseTextButton: {
+        color: 'grey',
+        fontWeight: 'bold',
+        marginHorizontal: 20
     },
     mainButton: {
         height: 35,

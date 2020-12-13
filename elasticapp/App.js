@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import {
   View,
   Text,
@@ -13,6 +13,8 @@ import ExerciseList from './src/components/ExerciseList'
 import MainButton from './src/components/MainButton'
 
 const App = () => {
+  const list = ['Abdominal', 'Flexão de cotovelo', 'Flexão de joelho']
+  const [listIndex, setIndex] = useState(0)
   return (
     <View style={styles.mainContainer}>
 
@@ -54,7 +56,23 @@ const App = () => {
         <ForceBar/>
         <Timer time={'00'}/>
       </View>
-      <ExerciseList list={'Abdominal'}/>
+      <ExerciseList 
+        list={list[listIndex]}
+        onBackPress={()=> {
+          if(listIndex <= 0 ){
+            setIndex(0)
+          }else{
+            setIndex( listIndex -1)
+          }
+        }}
+        onFrontPress={()=> {
+          if(listIndex >= 2){
+            setIndex(2)
+          }else{
+            setIndex(listIndex +1)
+          }
+        }}
+      />
       <MainButton title={'INICIAR'}/>
     </View>
   )
