@@ -7,8 +7,10 @@ import {
 } from 'react-native';
 import styles from './src/styles'
 import InfoCard from './src/components/InfoCard'
-
-
+import ForceBar from './src/components/ForceBar'
+import Timer from './src/components/Timer'
+import ExerciseList from './src/components/ExerciseList'
+import MainButton from './src/components/MainButton'
 
 const App = () => {
   return (
@@ -49,9 +51,11 @@ const App = () => {
       </View>
 
       <View style={styles.exerciseContainer}>
-        
+        <ForceBar/>
+        <Timer time={'00'}/>
       </View>
-
+      <ExerciseList list={'Abdominal'}/>
+      <MainButton title={'INICIAR'}/>
     </View>
   )
 
