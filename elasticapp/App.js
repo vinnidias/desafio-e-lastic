@@ -31,13 +31,13 @@ const App = () => {
         <InfoCard
           icon={'🚩'}
           description={'SERIES'}
-          numbers={series +'/'+ maxSeries}
+          numbers={series + '/' + maxSeries}
         />
 
         <InfoCard
           icon={'🔄'}
           description={'REPETIÇÕES'}
-          numbers={ repetitions+'/'+maxRepetitions}
+          numbers={repetitions + '/' + maxRepetitions}
         />
 
         <InfoCard
@@ -53,7 +53,7 @@ const App = () => {
         />
 
       </View>
-      
+
       <View style={styles.exerciseContainer}>
         <ForceBar />
         <Timer time={0} />
@@ -79,16 +79,24 @@ const App = () => {
         <MainButton
           title={'INICIAR'}
           onPress={() => {
-            setSeries(series + 1)
-            setRepetitions(repetitions + 1)
+            if (series >= maxSeries) {
+              setSeries(maxSeries)
+            }
+            if (repetitions >= maxRepetitions) {
+              setRepetitions(maxRepetitions)
+            } else {
+              setSeries(series + 1)
+              setRepetitions(repetitions + 1)
+            }
+
           }}
         />
-        <MainButton 
-          title={'RESETAR'} 
-          onPress={()=> {
+        <MainButton
+          title={'RESETAR'}
+          onPress={() => {
             setSeries(0)
             setRepetitions(0)
-          }}  
+          }}
         />
       </View>
     </View>
