@@ -91,6 +91,12 @@ const styles = {
         color: 'white',
         fontWeight: 'bold',
         alignSelf: 'center'
+    },
+
+    buttonsContainer:{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        padding: 20
     }
     
 }

@@ -1,8 +1,6 @@
-
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   View,
-  Text,
   Image
 } from 'react-native';
 import styles from './src/styles'
@@ -15,6 +13,10 @@ import MainButton from './src/components/MainButton'
 const App = () => {
   const list = ['Abdominal', 'Flexão de cotovelo', 'Flexão de joelho']
   const [listIndex, setIndex] = useState(0)
+  const [series, setSeries] = useState(0)
+  const [repetitions, setRepetitions] = useState(0)
+  const [maxSeries, setMaxSeries] = useState(3)
+  const [maxRepetitions, setMaxRepetitions] = useState(3)
   return (
     <View style={styles.mainContainer}>
 
@@ -29,13 +31,13 @@ const App = () => {
         <InfoCard
           icon={'🚩'}
           description={'SERIES'}
-          numbers={'0/1'}
+          numbers={series +'/'+ maxSeries}
         />
 
         <InfoCard
           icon={'🔄'}
           description={'REPETIÇÕES'}
-          numbers={'0/1'}
+          numbers={ repetitions+'/'+maxRepetitions}
         />
 
         <InfoCard
@@ -51,29 +53,44 @@ const App = () => {
         />
 
       </View>
-
+      
       <View style={styles.exerciseContainer}>
-        <ForceBar/>
-        <Timer time={'00'}/>
+        <ForceBar />
+        <Timer time={0} />
       </View>
-      <ExerciseList 
+      <ExerciseList
         list={list[listIndex]}
-        onBackPress={()=> {
-          if(listIndex <= 0 ){
+        onBackPress={() => {
+          if (listIndex <= 0) {
             setIndex(0)
-          }else{
-            setIndex( listIndex -1)
+          } else {
+            setIndex(listIndex - 1)
           }
         }}
-        onFrontPress={()=> {
-          if(listIndex >= 2){
+        onFrontPress={() => {
+          if (listIndex >= 2) {
             setIndex(2)
-          }else{
-            setIndex(listIndex +1)
+          } else {
+            setIndex(listIndex + 1)
           }
         }}
       />
-      <MainButton title={'INICIAR'}/>
+      <View style={styles.buttonsContainer}>
+        <MainButton
+          title={'INICIAR'}
+          onPress={() => {
+            setSeries(series + 1)
+            setRepetitions(repetitions + 1)
+          }}
+        />
+        <MainButton 
+          title={'RESETAR'} 
+          onPress={()=> {
+            setSeries(0)
+            setRepetitions(0)
+          }}  
+        />
+      </View>
     </View>
   )
 
