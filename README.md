@@ -8,6 +8,7 @@ Infelizmente não consegui desenvolver bem os dois deixando essa dívida técnic
 De qualquer forma, tentei ser fiel ao layout e demonstrar as minhas habilidades para o front-end da aplicação.
 Espero que tenha sido o suficiente para avaliação e desde já agradeço a oportunidade.
 
+
 ## Instalação
 
  Para a instalação: 
@@ -29,3 +30,8 @@ npm run android
 ## Bibliotecas
 
 - [react-native](https://reactnative.dev/docs/getting-started)
+
+## Prints 
+
+![WhatsApp Image 2020-12-14 at 12 14 36](https://user-images.githubusercontent.com/60718041/102099247-db020280-3e06-11eb-9e0b-fa0e16a00507.jpeg)  ![WhatsApp Image 2020-12-14 at 12 13 39](https://user-images.githubusercontent.com/60718041/102099416-08e74700-3e07-11eb-900d-5771b6d94ecd.jpeg)
+
